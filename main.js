@@ -3,26 +3,12 @@ console.log("-- JavaCrisp --")
                 console.log("Menu: \n 1. PIZZA Rs.3500 \n 2. BURGER Rs.750 \n 3. SANDWICH Rs.550     (🔥🔥14% DISCOUNT ON SPENDING Rs. 5000 OR MORE🔥🔥) \n 4. SHAWARMA Rs.450 \n 5. NUGGETS(Bucket) Rs.800 \n -Press 0 to Exit-")
                 console.log("Enter the number according to the food you want to order:")
                 
-                let quantity,price,
-                total,items,totalbgst,order = prompt("Enter the order number:")
-             
-                // invalid order number check   // exit condition when user enters 0
-                if(order > 5){
-                        alert("Invalid Order Number");
-                        throw new Error("Invalid order Number");
-                        
-                } 
-                else if(order == 0){
-                        alert("KUCH ORDER NI KARNA THA TO AYE KYU???????? \n CHAL BHAG JA😡")
-                        throw new Error("PEHLE DECIDE KIYA KARO KE MANGWANA BHI HA YA NI ❗❗❗");
-                }
-
-                // discount for spending more than 5000
-                alert("🔥🔥14% DISCOUNT ON SPENDING Rs. 5000 OR MORE🔥🔥")
+                let quantity,price,total,items,totalbgst,order,zorder="0";
+            
+                order = prompt("Enter the number according to what you want to order:")
+        
                 
-
-
-                // order taking
+                // order taking and checking
                 if(order == 1){
                        quantity= prompt("Enter the quantity of Pizzas you want to order:")
                        total=3500*quantity
@@ -54,8 +40,23 @@ console.log("-- JavaCrisp --")
                         price=800*quantity
                         items="Nuggets"
                 }
-                else{
+                // if order num is invalid
+                else if(order>5){
+                        alert("Invalid Number,enter correct number.");
+                        throw new Error("Invalid Number");
                 }
+                // if user wants to exit
+                else if(order==zorder){
+                        alert("KUCH ORDER NI KARNA THA TO AYE KYU???????? \n CHAL BHAG JA😡😡")
+                        throw new Error("PEHLE DECIDE KIYA KARO KE KUCH MANGWANA BHI HA YA NI 😑");
+                }
+                else{ alert("NO NUMBER WAS GIVEN AS INPUT")
+                        throw new Error("NO NUMBER WAS GIVEN AS INPUT");
+                        
+                }
+
+                // discount for spending more than 5000
+                 alert("🔥🔥14% DISCOUNT ON SPENDING Rs. 5000 OR MORE🔥🔥")
                 
                 // total with discount
                 if(price>=5000){
@@ -109,4 +110,4 @@ console.log("-- JavaCrisp --")
                 
                 
                 // thankyou
-                console.log("\n \n \n�� Thank you for choosing our Cafe! ��")
+                console.log("\n \n \n�� Thank you for choosing our Cafe! �� \n       We'd love to see you again! \n           UAN:420 666 999 \n           ---JavaCrisp--- ")
